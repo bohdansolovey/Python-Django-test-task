@@ -9,20 +9,27 @@ from users.serializers import UserSerializer
 
 
 class UserList(generics.ListAPIView):
+    """
+        List of all users
+    """
     queryset = CustomUser.objects.all()
     serializer_class = UserSerializer
 
 
 class UserDetail(generics.RetrieveAPIView):
+    """
+         detail information about  selected user
+     """
     queryset = CustomUser.objects.all()
     serializer_class = UserSerializer
 
 
-class UserViewSet(viewsets.ModelViewSet):
-    queryset = CustomUser.objects.all()
-    serializer_class = UserSerializer
 
-class PostByAuthor(generics.ListCreateAPIView):
+
+class PostByAuthor(generics.ListAPIView):
+    """
+        allows you to view all the posts of the user who asks
+    """
     queryset = Post.objects.all()
     serializer_class = PostSerializer
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
