@@ -3,6 +3,7 @@
 ## Django 2.1.5
 ### How to build this project ? 
 1. requirements.txt
+2. download files
 
 ### Description
 Write a RESTful service (only api) of the bulletin board. Users register and post their ads.
