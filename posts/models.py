@@ -32,8 +32,7 @@ class Post(models.Model ):
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default="draft")
     objects = models.Manager()
     published = PublishedManager()
-    img = models.ImageField(upload_to=settings.MEDIA_ROOT,
-                            height_field=300, width_field=300, blank=True,null=True)
+    img = models.ImageField(upload_to='images/', default='images/no_ing.jpg', blank=True,null=True)
 
 
     class Meta:
