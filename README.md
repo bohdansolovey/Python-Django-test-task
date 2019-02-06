@@ -2,7 +2,7 @@
 ## Рython 3.7.0
 ## Django 2.1.5
 ### How to build this project ? 
-1. requirements.txt
+1. requirements.txt (pip install -r requirements.txt)
 2. download files
 
 ### Description
@@ -26,4 +26,4 @@ Write a RESTful service (only api) of the bulletin board. Users register and pos
 - image
 
 # About
-- You can read docs of this api on address /docs
+- You can read docs of this api  when its running on address /docs
