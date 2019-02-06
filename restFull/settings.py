@@ -15,7 +15,16 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+"""
+Absolute filesystem path to the directory that 
+will hold user-uploaded files.
+"""
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+"""
+Relative browser URL you should access your media files from
+"""
+MEDIA_URL = '/media/'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
@@ -45,7 +54,6 @@ INSTALLED_APPS = [
     'rest_framework_swagger',
     'posts',
     'users',
-
 
 ]
 
@@ -122,7 +130,9 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework_simplejwt.authentication.JWTTokenUserAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
     ),
 }
 
@@ -148,8 +158,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-MEDIA_URL = '/media/'
+
 
 AUTH_USER_MODEL = 'users.CustomUser'
 SITE_ID = 1
