@@ -1,8 +1,6 @@
 
-from django.urls import path, include
+from django.urls import path
 from rest_framework.urlpatterns import format_suffix_patterns
-from rest_framework_jwt.views import refresh_jwt_token
-
 from posts import views
 
 urlpatterns = [
@@ -13,4 +11,5 @@ urlpatterns = [
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
+
 
