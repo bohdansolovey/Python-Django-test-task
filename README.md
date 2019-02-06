@@ -1,21 +1,28 @@
 # Python-Django-test-task
 ## Рython 3.7.0
 ## Django 2.1.5
-### Описание
-Написать RESTful сервис (только api) доски объявлений. Пользователи регистрируются и размещают свои объявления. 
-#### Незарегистрированный пользователь может:
--зарегистрироваться по почте и паролю (без подтверждения и отправки почты)
--получить токен используя почту и пароль (авторизоваться)
--просмотреть все объявления (постранично)
-#### Зарегистрированный пользователь
--создать объявление
--редактировать свое объявление
--удалить свое объявление
--просмотреть свои объявления (постранично)
--просмотреть все объявления (постранично)
+### How to build this project ? 
+1. requirements.txt
 
-### Объявление - это:
--заголовок - строка до 80 символов
--сообщение - текст до 1000 символов
-опционально: изображение 
+### Description
+Write a RESTful service (only api) of the bulletin board. Users register and post their ads.
 
+### An unregistered user can:
+- register by mail and password (without confirmation and sending of mail) 
+- get tokens using mail and password (login) 
+- view all ads (page-by-page)
+
+### Registered user
+- create an advertisement 
+- edit your ad
+- delete your ad 
+- view your ads (page by page) 
+- view all the ads (page-by-page)
+
+### Announcement is:
+- title 
+- body 
+- image
+
+# About
+- You can read docs of this api on address /docs
